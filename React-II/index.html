@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React-I</title>
+
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</body>
+
+  
+  <script type="text/babel">
+   let root=document.getElementById("root");
+   let rootElement=ReactDOM.createRoot(root);
+   let properties={
+    border:'2px solid black',
+    display:'flex',
+    justifyContent:"space-around",
+    backgroundColor:"pink",
+    fontWeight:'bold',
+    fontSize:'40px',
+    height:"130px",
+    padding:"80px"
+   }
+   let child1={
+     border:"2px solid black",
+     backgroundColor:"red",
+   width:"150px",
+   height:"90px",
+  
+   }
+   let child2={
+     border:"2px solid black",
+     backgroundColor:"yellow",
+     width:"150px",
+     height:"90px",
+   }
+   let child3={
+     border:"2px solid black",
+     backgroundColor:"green",
+     width:"150px",
+     height:"90px",
+   }
+   let child4={
+     border:"2px solid black",
+     backgroundColor:"blue",
+     width:"150px",
+     height:"90px",
+   }
+   let ptag={
+       margin:"-80px"
+   }
+
+   let flex=React.createElement("div",{
+    style:properties,
+},[
+    React.createElement('p',{style:ptag},"Parent"),
+    React.createElement("div",{style:child1},"1"),
+    React.createElement("div",{style:child2},"2"),
+    React.createElement("div",{style:child3},"3"),
+    React.createElement("div",{style:child4},"4"),
+   ])
+rootElement.render(flex)
+
+  </script>
+</html>
